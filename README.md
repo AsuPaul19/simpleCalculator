@@ -1,10 +1,10 @@
 # CSC 413 - Project One
 
-## Student Name  : Name here
+## Student Name  : Paul Asu
 
-## Student ID    : ID here
+## Student ID    : 920-164-164
 
-## Student Email : Email here
+## Student Email : pasu@mail.sfsu.edu
 
 ### Note failure to completely fill out this README.md could cause you to recieve a  0 for your project until correctly done
 
@@ -25,4 +25,7 @@ If for some reason it does not, you can add the jars in the following way:
 6. After selection jar, a file selector will appear, navigate to the folder calcualtor/src/test/resources
 7. Add ALL jars in this folder. Then hit OK/Accept until all windows for project structure are closed.
 8. Now all jar needed to run unit test should be attached to your project.
-9. To run unit tests you can simply select any of the files in test/java. Also you may right-slick on the java folder inside test and select run all tests to run all given unit tests.
+9. simply select any of the files in test/java. Also you may right-slick on the java folder inside test and select run all tests to run all given unit tests.
+
+
+
