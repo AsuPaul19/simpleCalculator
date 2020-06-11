@@ -1,12 +1,11 @@
+import edu.csc413.calculator.evaluator.MultiplyOperator;
 import edu.csc413.calculator.evaluator.Operand;
-import edu.csc413.calculator.operators.MultiplyOperator;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 @DisplayName("Multiplication Test")

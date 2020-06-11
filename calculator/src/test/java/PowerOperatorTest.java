@@ -1,12 +1,11 @@
 import edu.csc413.calculator.evaluator.Operand;
-import edu.csc413.calculator.operators.PowerOperator;
+import edu.csc413.calculator.evaluator.PowerOperator;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 @DisplayName("Power Test")

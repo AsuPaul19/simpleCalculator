@@ -1,6 +1,9 @@
 package edu.csc413.calculator.operators;
 
-import edu.csc413.calculator.evaluator.Operand;
+import edu.csc413.calculator.evaluator.*;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public abstract class Operator {
     // The Operator class should contain an instance of a HashMap
@@ -13,6 +16,21 @@ public abstract class Operator {
     // HashMap operators = new HashMap();
     // operators.put( "+", new AdditionOperator() );
     // operators.put( "-", new SubtractionOperator() );
+
+    private static Map<String, Operator>operators;
+
+    static {
+        operators = new HashMap<>();
+        operators.put("+", new AddOperator());
+        operators.put("-", new SubtractOperator());
+        operators.put("*", new MultiplyOperator());
+        operators.put("/", new DivideOperator());
+        operators.put("^", new PowerOperator());
+        operators.put("(", new leftParenthesis());
+        operators.put(")", new rightParenthesisOperator());
+        operators.put("!", new ExclamationOperator());
+        operators.put("#", new PoundOperator());
+    }
 
     /**
      * retrieve the priority of an Operator
@@ -29,16 +47,6 @@ public abstract class Operator {
     public abstract Operand execute(Operand operandOne, Operand operandTwo);
 
     /**
-     * determines if a given token is a valid operator.
-     * please do your best to avoid static checks
-     * for example token.equals("+") and so on.
-     * Think about what happens if we add more operators.
-     */
-    public static Operator getOperator(String token) {
-        return null;
-    }
-
-    /**
      * used to retrieve an operator from our HashMap.
      * This will act as out publicly facing function,
      * granting access to the Operator HashMap.
@@ -46,7 +54,33 @@ public abstract class Operator {
      * @param token key of the operator we want to retrieve
      * @return reference to a Operator instance.
      */
-    public static boolean check(String token) {
-        return false;
+    public static boolean check(String token)
+    {
+        return operators.containsKey(token);
     }
+    /**
+     * determines if a given token is a valid operator.
+     * please do your best to avoid static checks
+     * for example token.equals("+") and so on.
+     * Think about what happens if we add more operators.
+     */
+    public static Operator getOperator(String token)
+    {
+//        return operators.containsKey(token)
+        if (check(token))
+        {
+            return operators.get(token);
+        }
+        return null;
+    }
+
+//    public static String getAllOperators()
+//    {
+//        String list = "";
+//        for (String key : operators.keySet())
+//        {
+//            list += key;
+//        }
+//        return list;
+//    }
 }

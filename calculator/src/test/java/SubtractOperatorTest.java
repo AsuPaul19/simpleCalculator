@@ -1,12 +1,11 @@
 import edu.csc413.calculator.evaluator.Operand;
-import edu.csc413.calculator.operators.SubtractOperator;
+import edu.csc413.calculator.evaluator.SubtractOperator;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 @DisplayName("Subtraction Test")
@@ -45,7 +44,7 @@ public class SubtractOperatorTest {
         Operand operatorTwo =  new Operand(-6);
         SubtractOperator so =  new SubtractOperator();
         Operand result = new Operand(so.execute(operandOne,operatorTwo).getValue());
-        assertThat( result.getValue(), is(equalTo(-17)));
+        assertThat( result.getValue(), is(equalTo(17)));
     }
 
     @Test

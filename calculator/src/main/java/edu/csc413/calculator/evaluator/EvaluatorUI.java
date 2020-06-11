@@ -1,5 +1,7 @@
 package edu.csc413.calculator.evaluator;
 
+import edu.csc413.calculator.exceptions.InvalidTokenException;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -71,7 +73,77 @@ public class EvaluatorUI extends JFrame implements ActionListener {
      *                    button is pressed.
      */
     public void actionPerformed(ActionEvent actionEventObject) {
-
+        if (actionEventObject.getSource()==buttons[0]){
+            expressionTextField.setText(expressionTextField.getText()+buttonText[0]);
+        }
+        if (actionEventObject.getSource()==buttons[1]){
+            expressionTextField.setText(expressionTextField.getText()+buttonText[1]);
+        }
+        if (actionEventObject.getSource()==buttons[2]){
+            expressionTextField.setText(expressionTextField.getText()+buttonText[2]);
+        }
+        //////
+        if (actionEventObject.getSource()==buttons[3]){
+            expressionTextField.setText(expressionTextField.getText()+buttonText[3]);
+        }
+        if (actionEventObject.getSource()==buttons[4]){
+            expressionTextField.setText(expressionTextField.getText()+buttonText[4]);
+        }
+        if (actionEventObject.getSource()==buttons[5]){
+            expressionTextField.setText(expressionTextField.getText()+buttonText[5]);
+        }
+        if (actionEventObject.getSource()==buttons[6]){
+            expressionTextField.setText(expressionTextField.getText()+buttonText[6]);
+        }
+        if (actionEventObject.getSource()==buttons[7]){
+            expressionTextField.setText(expressionTextField.getText()+buttonText[7]);
+        }
+        if (actionEventObject.getSource()==buttons[8]){
+            expressionTextField.setText(expressionTextField.getText()+buttonText[8]);
+        }
+        if (actionEventObject.getSource()==buttons[9]){
+            expressionTextField.setText(expressionTextField.getText()+buttonText[9]);
+        }
+        if (actionEventObject.getSource()==buttons[10]){
+            expressionTextField.setText(expressionTextField.getText()+buttonText[10]);
+        }
+        if (actionEventObject.getSource()==buttons[11]){
+            expressionTextField.setText(expressionTextField.getText()+buttonText[11]);
+        }
+        //////
+        if (actionEventObject.getSource()==buttons[12]){
+            expressionTextField.setText(expressionTextField.getText()+buttonText[12]);
+        }
+        if (actionEventObject.getSource()==buttons[13]){
+            expressionTextField.setText(expressionTextField.getText()+buttonText[13]);
+        }
+        if (actionEventObject.getSource()==buttons[14]){
+            Evaluator cal = new Evaluator();
+            try {
+                expressionTextField.setText(Integer.toString(cal.evaluateExpression(expressionTextField.getText())));
+            } catch (InvalidTokenException e) {
+                e.printStackTrace();
+            }
+            expressionTextField.setText(expressionTextField.getText()+buttonText[14]);
+        }
+        if (actionEventObject.getSource()==buttons[15]){
+            expressionTextField.setText(expressionTextField.getText()+buttonText[15]);
+        }
+        if (actionEventObject.getSource()==buttons[16]){
+            expressionTextField.setText(expressionTextField.getText()+buttonText[16]);
+        }
+        if (actionEventObject.getSource()==buttons[17]){
+            expressionTextField.setText(expressionTextField.getText()+buttonText[17]);
+        }
+        if (actionEventObject.getSource()==buttons[18]){
+            expressionTextField.setText(" ");
+        }
+        if (actionEventObject.getSource()==buttons[19]){
+            expressionTextField.setText(" ");
+        }
+//        if (actionEventObject.getSource()==buttons[20]){
+//            expressionTextField.setText(" ");
+//        }
 
     }
 }
